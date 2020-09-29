@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StudentTracking.cs">
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentTrackingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentTracking.Designer.cs">
-      <DependentUpon>StudentTracking.cs</DependentUpon>
+    <Compile Include="StudentTrackingForm.Designer.cs">
+      <DependentUpon>StudentTrackingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,8 +64,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentTracking.resx">
-      <DependentUpon>StudentTracking.cs</DependentUpon>
+    <EmbeddedResource Include="StudentTrackingForm.resx">
+      <DependentUpon>StudentTrackingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

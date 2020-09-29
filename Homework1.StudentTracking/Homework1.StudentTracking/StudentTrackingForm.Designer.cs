@@ -1,6 +1,6 @@
 ﻿namespace Homework1.StudentTracking
 {
-    partial class StudentTracking
+    partial class StudentTrackingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.firstNameTxtbx = new System.Windows.Forms.TextBox();
             this.lastNameTxtbx = new System.Windows.Forms.TextBox();
             this.idTxtBox = new System.Windows.Forms.TextBox();
@@ -51,8 +52,10 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.removeBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.requiredGroupBox.SuspendLayout();
             this.optionalGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameTxtbx
@@ -248,6 +251,7 @@
             this.submitBtn.TabIndex = 10;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // removeBtn
             // 
@@ -257,6 +261,7 @@
             this.removeBtn.TabIndex = 12;
             this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // clearBtn
             // 
@@ -266,12 +271,17 @@
             this.clearBtn.TabIndex = 13;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // StudentTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 498);
+            this.ClientSize = new System.Drawing.Size(731, 480);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.submitBtn);
@@ -284,6 +294,7 @@
             this.requiredGroupBox.PerformLayout();
             this.optionalGroupBox.ResumeLayout(false);
             this.optionalGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +324,7 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 

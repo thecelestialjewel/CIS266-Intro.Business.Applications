@@ -16,7 +16,7 @@ namespace Homework1.StudentTracking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentTracking());
+            Application.Run(new StudentTrackingForm());
         }
     }
 }
