@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Christine Jordan 9.29.22
+using System;
 using System.Windows.Forms;
 
 namespace Homework1.StudentTracking
@@ -31,6 +32,10 @@ namespace Homework1.StudentTracking
                 }
                 student.Birthday = birthdayPicker.Value;
                 studentApplications.Items.Add(student);
+                if (studentApplications.Items.Count > 0)
+                {
+                    removeBtn.Enabled = true; //turning on the remove button
+                }
             }
             catch (Exception error)
             {
@@ -44,6 +49,10 @@ namespace Homework1.StudentTracking
             if (removeStudent != null)
             {
                 studentApplications.Items.Remove(removeStudent);
+                if (studentApplications.Items.Count == 0)
+                {
+                    removeBtn.Enabled = false;
+                }
             }
             else
             {

@@ -17,6 +17,7 @@ namespace Homework1.StudentTracking
             IsWaResident = isWaResident;
             Major = major;
             ApplicationDate = applicationDate;
+
         }
         private string firstName; //backing variable. private to protect data. allows you to control how user interacts with it.
         public string FirstName
@@ -163,7 +164,12 @@ namespace Homework1.StudentTracking
         {
             get
             {
-                return (int)(((DateTime.Now - Birthday).TotalDays) / 365.2425);
+                int age = (int)(((DateTime.Now - Birthday).TotalDays) / 365.2425); //Extra Credit: 13 years of age
+                if (age < 13)
+                {
+                    throw new Exception("You must be 13 years old.");
+                }
+                return age;
             }
         }
         public override string ToString()

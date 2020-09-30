@@ -255,6 +255,7 @@
             // 
             // removeBtn
             // 
+            this.removeBtn.Enabled = false;
             this.removeBtn.Location = new System.Drawing.Point(245, 445);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(75, 23);
