@@ -46,7 +46,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
-            this.phoneTxtbx = new System.Windows.Forms.TextBox();
             this.emailTxtbx = new System.Windows.Forms.TextBox();
             this.studentApplications = new System.Windows.Forms.ListBox();
             this.submitBtn = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.exitBtn = new System.Windows.Forms.Button();
+            this.phoneTxtbx = new System.Windows.Forms.MaskedTextBox();
             this.requiredGroupBox.SuspendLayout();
             this.optionalGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -178,11 +178,11 @@
             // 
             // optionalGroupBox
             // 
+            this.optionalGroupBox.Controls.Add(this.phoneTxtbx);
             this.optionalGroupBox.Controls.Add(this.label9);
             this.optionalGroupBox.Controls.Add(this.label8);
             this.optionalGroupBox.Controls.Add(this.label7);
             this.optionalGroupBox.Controls.Add(this.birthdayPicker);
-            this.optionalGroupBox.Controls.Add(this.phoneTxtbx);
             this.optionalGroupBox.Controls.Add(this.emailTxtbx);
             this.optionalGroupBox.Location = new System.Drawing.Point(397, 21);
             this.optionalGroupBox.Name = "optionalGroupBox";
@@ -226,13 +226,6 @@
             this.birthdayPicker.Name = "birthdayPicker";
             this.birthdayPicker.Size = new System.Drawing.Size(130, 20);
             this.birthdayPicker.TabIndex = 2;
-            // 
-            // phoneTxtbx
-            // 
-            this.phoneTxtbx.Location = new System.Drawing.Point(150, 50);
-            this.phoneTxtbx.Name = "phoneTxtbx";
-            this.phoneTxtbx.Size = new System.Drawing.Size(155, 20);
-            this.phoneTxtbx.TabIndex = 1;
             // 
             // emailTxtbx
             // 
@@ -295,6 +288,15 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // phoneTxtbx
+            // 
+            this.phoneTxtbx.Location = new System.Drawing.Point(150, 57);
+            this.phoneTxtbx.Mask = "(999) 000-0000";
+            this.phoneTxtbx.Name = "phoneTxtbx";
+            this.phoneTxtbx.Size = new System.Drawing.Size(155, 20);
+            this.phoneTxtbx.TabIndex = 15;
+            this.phoneTxtbx.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // StudentTrackingForm
             // 
             this.AcceptButton = this.submitBtn;
@@ -339,7 +341,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker birthdayPicker;
-        private System.Windows.Forms.TextBox phoneTxtbx;
         private System.Windows.Forms.TextBox emailTxtbx;
         private System.Windows.Forms.ListBox studentApplications;
         private System.Windows.Forms.Button submitBtn;
@@ -347,6 +348,7 @@
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.MaskedTextBox phoneTxtbx;
     }
 }
 

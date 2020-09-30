@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Homework1.StudentTracking
 {
     public partial class StudentTrackingForm : Form
     {
-       
+
         public StudentTrackingForm()
         {
             InitializeComponent();
@@ -20,24 +13,29 @@ namespace Homework1.StudentTracking
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            Student student = new Student(firstNameTxtbx.Text,
-                                          lastNameTxtbx.Text,
-                                          idTxtBox.Text,
-                                          waResidentCheckBox.Checked,
-                                          majorCombobox.SelectedItem.ToString(),
-                                          applicationPicker.Value);
-            if (!string.IsNullOrWhiteSpace(emailTxtbx.Text))
+            try
             {
-                student.EmailAddress = emailTxtbx.Text;
+                Student student = new Student(firstNameTxtbx.Text,
+                                            lastNameTxtbx.Text,
+                                            idTxtBox.Text,
+                                            waResidentCheckBox.Checked,
+                                            majorCombobox.SelectedItem?.ToString(), //practicing with null conditional operator
+                                            applicationPicker.Value);
+                if (!string.IsNullOrWhiteSpace(emailTxtbx.Text))
+                {
+                    student.EmailAddress = emailTxtbx.Text;
+                }
+                if (!string.IsNullOrWhiteSpace(phoneTxtbx.Text))
+                {
+                    student.PhoneNumber = phoneTxtbx.Text;
+                }
+                student.Birthday = birthdayPicker.Value;
+                studentApplications.Items.Add(student);
             }
-            if (!string.IsNullOrWhiteSpace(phoneTxtbx.Text))
+            catch (Exception error)
             {
-                student.PhoneNumber = phoneTxtbx.Text;
+                MessageBox.Show(error.Message);
             }
-            student.Birthday = birthdayPicker.Value;
-            
-
-            studentApplications.Items.Add(student);
         }
 
         private void removeBtn_Click(object sender, EventArgs e)
@@ -73,6 +71,7 @@ namespace Homework1.StudentTracking
 
         private void studentApplications_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             Student selectedStudent = studentApplications.SelectedItem as Student;
             if (selectedStudent != null)
             {

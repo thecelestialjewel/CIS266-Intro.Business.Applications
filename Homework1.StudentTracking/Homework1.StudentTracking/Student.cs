@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Christine Jordan 9.29.2020 Homework 1 Project
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -129,7 +130,7 @@ namespace Homework1.StudentTracking
             get => phoneNumber;
             set
             {
-                if (string.IsNullOrWhiteSpace(value) || value.Length != 9)
+                if (string.IsNullOrWhiteSpace(value) || value.Length != 10)
                 {
                     throw new Exception("Must be a valid 9 digit phone number.");
                 }
