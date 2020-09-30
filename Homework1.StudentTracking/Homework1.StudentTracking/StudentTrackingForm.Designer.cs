@@ -101,7 +101,7 @@
             this.majorCombobox.Location = new System.Drawing.Point(180, 222);
             this.majorCombobox.Name = "majorCombobox";
             this.majorCombobox.Size = new System.Drawing.Size(177, 21);
-            this.majorCombobox.TabIndex = 4;
+            this.majorCombobox.TabIndex = 3;
             // 
             // applicationPicker
             // 
@@ -109,7 +109,7 @@
             this.applicationPicker.Location = new System.Drawing.Point(183, 282);
             this.applicationPicker.Name = "applicationPicker";
             this.applicationPicker.Size = new System.Drawing.Size(177, 20);
-            this.applicationPicker.TabIndex = 5;
+            this.applicationPicker.TabIndex = 4;
             // 
             // requiredGroupBox
             // 
@@ -127,7 +127,7 @@
             this.requiredGroupBox.Location = new System.Drawing.Point(15, 21);
             this.requiredGroupBox.Name = "requiredGroupBox";
             this.requiredGroupBox.Size = new System.Drawing.Size(365, 395);
-            this.requiredGroupBox.TabIndex = 6;
+            this.requiredGroupBox.TabIndex = 0;
             this.requiredGroupBox.TabStop = false;
             this.requiredGroupBox.Text = "Required";
             // 
@@ -173,7 +173,7 @@
             this.label1.Location = new System.Drawing.Point(6, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 7;
             this.label1.Text = "First Name:";
             // 
             // optionalGroupBox
@@ -187,7 +187,7 @@
             this.optionalGroupBox.Location = new System.Drawing.Point(397, 21);
             this.optionalGroupBox.Name = "optionalGroupBox";
             this.optionalGroupBox.Size = new System.Drawing.Size(324, 155);
-            this.optionalGroupBox.TabIndex = 7;
+            this.optionalGroupBox.TabIndex = 1;
             this.optionalGroupBox.TabStop = false;
             this.optionalGroupBox.Text = "Optional";
             // 
@@ -225,14 +225,14 @@
             this.birthdayPicker.Location = new System.Drawing.Point(150, 87);
             this.birthdayPicker.Name = "birthdayPicker";
             this.birthdayPicker.Size = new System.Drawing.Size(130, 20);
-            this.birthdayPicker.TabIndex = 2;
+            this.birthdayPicker.TabIndex = 3;
             // 
             // emailTxtbx
             // 
             this.emailTxtbx.Location = new System.Drawing.Point(150, 19);
             this.emailTxtbx.Name = "emailTxtbx";
             this.emailTxtbx.Size = new System.Drawing.Size(155, 20);
-            this.emailTxtbx.TabIndex = 0;
+            this.emailTxtbx.TabIndex = 1;
             // 
             // studentApplications
             // 
@@ -248,7 +248,7 @@
             this.submitBtn.Location = new System.Drawing.Point(71, 445);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(75, 23);
-            this.submitBtn.TabIndex = 10;
+            this.submitBtn.TabIndex = 2;
             this.submitBtn.Text = "&Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
@@ -259,7 +259,7 @@
             this.removeBtn.Location = new System.Drawing.Point(245, 445);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(75, 23);
-            this.removeBtn.TabIndex = 12;
+            this.removeBtn.TabIndex = 3;
             this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
@@ -269,7 +269,7 @@
             this.clearBtn.Location = new System.Drawing.Point(417, 445);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(75, 23);
-            this.clearBtn.TabIndex = 13;
+            this.clearBtn.TabIndex = 4;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
@@ -284,7 +284,7 @@
             this.exitBtn.Location = new System.Drawing.Point(585, 445);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(75, 23);
-            this.exitBtn.TabIndex = 14;
+            this.exitBtn.TabIndex = 5;
             this.exitBtn.Text = "&Exit";
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
@@ -295,7 +295,7 @@
             this.phoneTxtbx.Mask = "(999) 000-0000";
             this.phoneTxtbx.Name = "phoneTxtbx";
             this.phoneTxtbx.Size = new System.Drawing.Size(155, 20);
-            this.phoneTxtbx.TabIndex = 15;
+            this.phoneTxtbx.TabIndex = 2;
             this.phoneTxtbx.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // StudentTrackingForm
