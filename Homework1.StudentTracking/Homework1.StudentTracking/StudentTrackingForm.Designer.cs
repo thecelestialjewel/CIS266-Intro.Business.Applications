@@ -53,6 +53,7 @@
             this.removeBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.exitBtn = new System.Windows.Forms.Button();
             this.requiredGroupBox.SuspendLayout();
             this.optionalGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -92,6 +93,11 @@
             // majorCombobox
             // 
             this.majorCombobox.FormattingEnabled = true;
+            this.majorCombobox.Items.AddRange(new object[] {
+            "Computer Programming",
+            "Database Management",
+            "Other",
+            "Undeclared"});
             this.majorCombobox.Location = new System.Drawing.Point(180, 222);
             this.majorCombobox.Name = "majorCombobox";
             this.majorCombobox.Size = new System.Drawing.Size(177, 21);
@@ -242,20 +248,21 @@
             this.studentApplications.Name = "studentApplications";
             this.studentApplications.Size = new System.Drawing.Size(324, 160);
             this.studentApplications.TabIndex = 9;
+            this.studentApplications.SelectedIndexChanged += new System.EventHandler(this.studentApplications_SelectedIndexChanged);
             // 
             // submitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(169, 443);
+            this.submitBtn.Location = new System.Drawing.Point(71, 445);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(75, 23);
             this.submitBtn.TabIndex = 10;
-            this.submitBtn.Text = "Submit";
+            this.submitBtn.Text = "&Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // removeBtn
             // 
-            this.removeBtn.Location = new System.Drawing.Point(379, 443);
+            this.removeBtn.Location = new System.Drawing.Point(245, 445);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(75, 23);
             this.removeBtn.TabIndex = 12;
@@ -265,7 +272,7 @@
             // 
             // clearBtn
             // 
-            this.clearBtn.Location = new System.Drawing.Point(581, 443);
+            this.clearBtn.Location = new System.Drawing.Point(417, 445);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(75, 23);
             this.clearBtn.TabIndex = 13;
@@ -277,18 +284,32 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // StudentTracking
+            // exitBtn
             // 
+            this.exitBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.exitBtn.Location = new System.Drawing.Point(585, 445);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(75, 23);
+            this.exitBtn.TabIndex = 14;
+            this.exitBtn.Text = "&Exit";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // StudentTrackingForm
+            // 
+            this.AcceptButton = this.submitBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.exitBtn;
             this.ClientSize = new System.Drawing.Size(731, 480);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.studentApplications);
             this.Controls.Add(this.optionalGroupBox);
             this.Controls.Add(this.requiredGroupBox);
-            this.Name = "StudentTracking";
+            this.Name = "StudentTrackingForm";
             this.Text = "Student Tracking";
             this.requiredGroupBox.ResumeLayout(false);
             this.requiredGroupBox.PerformLayout();
@@ -325,6 +346,7 @@
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 

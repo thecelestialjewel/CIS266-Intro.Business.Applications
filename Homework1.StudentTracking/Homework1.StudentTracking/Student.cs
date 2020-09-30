@@ -110,7 +110,7 @@ namespace Homework1.StudentTracking
         #region optional 
 
         private string emailAddress;
-        private string EmailAddress
+        public string EmailAddress
         {
             get => emailAddress;
             set
@@ -164,6 +164,10 @@ namespace Homework1.StudentTracking
             {
                 return (int)(((DateTime.Now - Birthday).TotalDays) / 365.2425);
             }
+        }
+        public override string ToString()
+        {
+            return FullName + " " + ContactInfo + " " + Age;
         }
     }
 }
