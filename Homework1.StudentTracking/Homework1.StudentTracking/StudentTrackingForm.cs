@@ -12,7 +12,7 @@ namespace Homework1.StudentTracking
 {
     public partial class StudentTrackingForm : Form
     {
-        private List<Student> students = new List<Student>();
+       
         public StudentTrackingForm()
         {
             InitializeComponent();
@@ -35,19 +35,35 @@ namespace Homework1.StudentTracking
                 student.PhoneNumber = phoneTxtbx.Text;
             }
             student.Birthday = birthdayPicker.Value;
-            students.Add(student); //storing student in a list
+            
 
             studentApplications.Items.Add(student);
         }
 
         private void removeBtn_Click(object sender, EventArgs e)
         {
-
+            Student removeStudent = studentApplications.SelectedItem as Student; //casting 
+            if (removeStudent != null)
+            {
+                studentApplications.Items.Remove(removeStudent);
+            }
+            else
+            {
+                MessageBox.Show("Select student to remove.");
+            }
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-
+            firstNameTxtbx.Clear();
+            lastNameTxtbx.Clear();
+            idTxtBox.Clear();
+            waResidentCheckBox.Checked = false;
+            majorCombobox.SelectedItem = null;
+            applicationPicker.Value = DateTime.Now;
+            emailTxtbx.Clear();
+            phoneTxtbx.Clear();
+            birthdayPicker.Value = DateTime.Now;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
