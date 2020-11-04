@@ -16,20 +16,20 @@ namespace Homework3.StudentTuitionCalculator
 
         public int CreditAmount { get; private set; } //setting autoproperty
         
-        public ResidentStatuses ResidentStatus { get; private set; }
+        public ResidentStatuses ResidentStatus { get; private set; } //read only property
 
-        public string StudentID { get; private set; }
+        public string StudentID { get; private set; } //setting autoproperty
 
         public Calculator(string studentID, int numCredit, ResidentStatuses statuses)//constructor
         {
             StudentID = studentID;
-            CreditAmount = numCredit;
+            CreditAmount = numCredit; //assigning to property
             ResidentStatus = statuses;
         }
 
-        public decimal CalculateTuition()
+        public decimal CalculateTuition() //calculations for tuition based on provided rates
         {
-            decimal tuitionRates;
+            decimal tuitionRates; //set tuitionRates to decimal instead of double
             switch (ResidentStatus)
             {
                 case ResidentStatuses.Resident:
@@ -85,7 +85,7 @@ namespace Homework3.StudentTuitionCalculator
         }
         public override string ToString()
         {
-            return $"ID:[{StudentID}]-${CalculateTuition()}";
+            return $"Student ID:[{StudentID}]-${CalculateTuition()}"; //string interpolation 
         }
     }
 }

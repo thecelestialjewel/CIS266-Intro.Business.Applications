@@ -32,7 +32,7 @@ namespace Homework3.StudentTuitionCalculator
 
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e) //clearing all values
         {
             tuitionAmountLabel.Text = 0.0.ToString("C");
             creditAmountNumericUpDown.Value = 0;
@@ -42,7 +42,7 @@ namespace Homework3.StudentTuitionCalculator
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            Close(); //exit will close form
         }
 
         private void tuitionListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace Homework3.StudentTuitionCalculator
                 decimal tuition = calculator.CalculateTuition(); //declarung variable and capturing tuition calculation
                 tuitionAmountLabel.Text = tuition.ToString("C"); //to string into currency
 
-                switch (calculator.ResidentStatus)
+                switch (calculator.ResidentStatus) //switch that checks which state a resident status is in
                 {
                     case ResidentStatuses.Resident:
                         residentRadioBtn.Checked = true;
@@ -65,8 +65,6 @@ namespace Homework3.StudentTuitionCalculator
                         break;
                     case ResidentStatuses.NonResidentNonUS:
                         nonResNonUsCitizenRadioBtn.Checked = true;
-                        break;
-                    default:
                         break;
                 }
             }
