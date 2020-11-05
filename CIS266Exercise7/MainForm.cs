@@ -58,5 +58,11 @@ namespace Movies
         {
             ShowForm(new RatingsForm());
         }
+
+        private void genresToolStripMenuItem_Click(object sender, EventArgs e) /*Created click event for
+                                                                                genre*/
+        {
+            ShowForm(new GenreForm());//instantiate (new) genreform for Showform() to display
+        }
     }
 }

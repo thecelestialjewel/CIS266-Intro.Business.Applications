@@ -33,9 +33,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moviesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ratingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslReady = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ratingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.genresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -70,7 +71,8 @@
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.moviesToolStripMenuItem,
-            this.ratingsToolStripMenuItem});
+            this.ratingsToolStripMenuItem,
+            this.genresToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -81,6 +83,13 @@
             this.moviesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.moviesToolStripMenuItem.Text = "&Movies";
             this.moviesToolStripMenuItem.Click += new System.EventHandler(this.movieToolStripMenuItem_Click);
+            // 
+            // ratingsToolStripMenuItem
+            // 
+            this.ratingsToolStripMenuItem.Name = "ratingsToolStripMenuItem";
+            this.ratingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ratingsToolStripMenuItem.Text = "&Ratings";
+            this.ratingsToolStripMenuItem.Click += new System.EventHandler(this.ratingsToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -100,12 +109,12 @@
             this.tslReady.Text = "Ready";
             this.tslReady.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ratingsToolStripMenuItem
+            // genresToolStripMenuItem
             // 
-            this.ratingsToolStripMenuItem.Name = "ratingsToolStripMenuItem";
-            this.ratingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ratingsToolStripMenuItem.Text = "&Ratings";
-            this.ratingsToolStripMenuItem.Click += new System.EventHandler(this.ratingsToolStripMenuItem_Click);
+            this.genresToolStripMenuItem.Name = "genresToolStripMenuItem";
+            this.genresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.genresToolStripMenuItem.Text = "Genres";
+            this.genresToolStripMenuItem.Click += new System.EventHandler(this.genresToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -140,5 +149,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tslReady;
         private System.Windows.Forms.ToolStripMenuItem moviesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ratingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem genresToolStripMenuItem;
     }
 }
