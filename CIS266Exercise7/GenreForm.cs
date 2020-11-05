@@ -27,6 +27,10 @@ namespace Movies
 
         private void GenreForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'moviesDataSet.Movies' table. You can move, or remove it, as needed.
+            this.moviesTableAdapter.Fill(this.moviesDataSet.Movies);
+            // TODO: This line of code loads data into the 'moviesDataSet.MovieGenres' table. You can move, or remove it, as needed.
+            this.movieGenresTableAdapter.Fill(this.moviesDataSet.MovieGenres);
             // TODO: This line of code loads data into the 'moviesDataSet.Genres' table. You can move, or remove it, as needed.
             this.genresTableAdapter.Fill(this.moviesDataSet.Genres);
 
