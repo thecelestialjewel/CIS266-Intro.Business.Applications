@@ -94,6 +94,9 @@
     <Compile Include="SectionDetailForm.Designer.cs">
       <DependentUpon>SectionDetailForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CourseAndSectionsForm.resx">
+      <DependentUpon>CourseAndSectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CoursesForm.resx">
       <DependentUpon>CoursesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,10 +141,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Registration.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Registration_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Registration.mdf</DependentUpon>
     </Content>
   </ItemGroup>
