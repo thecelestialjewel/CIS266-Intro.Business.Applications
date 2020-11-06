@@ -38,5 +38,10 @@ namespace Homework4
         {
             ShowForm(new SectionDetailForm());
         }
+
+        private void courseAndSectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new CourseAndSectionsForm()); //instantiating form
+        }
     }
 }

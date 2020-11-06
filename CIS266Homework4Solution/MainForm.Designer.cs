@@ -36,6 +36,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.courseAndSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,14 +83,15 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.coursesToolStripMenuItem,
-            this.sectionsToolStripMenuItem});
+            this.sectionsToolStripMenuItem,
+            this.courseAndSectionToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -97,16 +99,23 @@
             // coursesToolStripMenuItem
             // 
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.coursesToolStripMenuItem.Text = "&Courses";
             this.coursesToolStripMenuItem.Click += new System.EventHandler(this.coursesToolStripMenuItem_Click);
             // 
             // sectionsToolStripMenuItem
             // 
             this.sectionsToolStripMenuItem.Name = "sectionsToolStripMenuItem";
-            this.sectionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sectionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sectionsToolStripMenuItem.Text = "&Sections";
             this.sectionsToolStripMenuItem.Click += new System.EventHandler(this.sectionsToolStripMenuItem_Click);
+            // 
+            // courseAndSectionToolStripMenuItem
+            // 
+            this.courseAndSectionToolStripMenuItem.Name = "courseAndSectionToolStripMenuItem";
+            this.courseAndSectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.courseAndSectionToolStripMenuItem.Text = "Course and Section";
+            this.courseAndSectionToolStripMenuItem.Click += new System.EventHandler(this.courseAndSectionToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -117,7 +126,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Registration";
             this.statusStrip1.ResumeLayout(false);
@@ -139,6 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coursesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sectionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem courseAndSectionToolStripMenuItem;
     }
 }
 
