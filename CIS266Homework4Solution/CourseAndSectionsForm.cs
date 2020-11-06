@@ -19,16 +19,36 @@ namespace Homework4
 
         private void coursesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.coursesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.registrationDataSet);
+            try //creating try catch to exceptions if anything breaks --cmj
+            {
+                this.Validate();
+                this.coursesBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.registrationDataSet);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+           
 
         }
 
         private void CourseAndSectionsForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'registrationDataSet.Courses' table. You can move, or remove it, as needed.
-            this.coursesTableAdapter.Fill(this.registrationDataSet.Courses);
+            try //creating try catch --cmj
+            {
+                // TODO: This line of code loads data into the 'registrationDataSet.Sections' table. You can move, or remove it, as needed.
+                this.sectionsTableAdapter.Fill(this.registrationDataSet.Sections);
+                // TODO: This line of code loads data into the 'registrationDataSet.Courses' table. You can move, or remove it, as needed.
+                this.coursesTableAdapter.Fill(this.registrationDataSet.Courses);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+           
 
         }
     }

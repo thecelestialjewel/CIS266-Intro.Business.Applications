@@ -29,29 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAndSectionsForm));
             System.Windows.Forms.Label courseIdLabel;
             System.Windows.Forms.Label departmentLabel;
             System.Windows.Forms.Label courseNumberLabel;
             System.Windows.Forms.Label titleLabel;
             System.Windows.Forms.Label creditsLabel;
             System.Windows.Forms.Label courseIdentifierLabel;
-            this.registrationDataSet = new Homework4.RegistrationDataSet();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coursesTableAdapter = new Homework4.RegistrationDataSetTableAdapters.CoursesTableAdapter();
-            this.tableAdapterManager = new Homework4.RegistrationDataSetTableAdapters.TableAdapterManager();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAndSectionsForm));
             this.coursesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.coursesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.courseIdTextBox = new System.Windows.Forms.TextBox();
             this.departmentTextBox = new System.Windows.Forms.TextBox();
@@ -59,38 +55,88 @@
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.creditsTextBox = new System.Windows.Forms.TextBox();
             this.courseIdentifierTextBox = new System.Windows.Forms.TextBox();
+            this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sectionsDataGridView = new System.Windows.Forms.DataGridView();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.registrationDataSet = new Homework4.RegistrationDataSet();
+            this.coursesTableAdapter = new Homework4.RegistrationDataSetTableAdapters.CoursesTableAdapter();
+            this.tableAdapterManager = new Homework4.RegistrationDataSetTableAdapters.TableAdapterManager();
+            this.sectionsTableAdapter = new Homework4.RegistrationDataSetTableAdapters.SectionsTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             courseIdLabel = new System.Windows.Forms.Label();
             departmentLabel = new System.Windows.Forms.Label();
             courseNumberLabel = new System.Windows.Forms.Label();
             titleLabel = new System.Windows.Forms.Label();
             creditsLabel = new System.Windows.Forms.Label();
             courseIdentifierLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).BeginInit();
             this.coursesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // registrationDataSet
+            // courseIdLabel
             // 
-            this.registrationDataSet.DataSetName = "RegistrationDataSet";
-            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            courseIdLabel.AutoSize = true;
+            courseIdLabel.Location = new System.Drawing.Point(12, 46);
+            courseIdLabel.Name = "courseIdLabel";
+            courseIdLabel.Size = new System.Drawing.Size(55, 13);
+            courseIdLabel.TabIndex = 1;
+            courseIdLabel.Text = "Course Id:";
             // 
-            // coursesBindingSource
+            // departmentLabel
             // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.registrationDataSet;
+            departmentLabel.AutoSize = true;
+            departmentLabel.Location = new System.Drawing.Point(12, 72);
+            departmentLabel.Name = "departmentLabel";
+            departmentLabel.Size = new System.Drawing.Size(65, 13);
+            departmentLabel.TabIndex = 3;
+            departmentLabel.Text = "Department:";
             // 
-            // coursesTableAdapter
+            // courseNumberLabel
             // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
+            courseNumberLabel.AutoSize = true;
+            courseNumberLabel.Location = new System.Drawing.Point(12, 98);
+            courseNumberLabel.Name = "courseNumberLabel";
+            courseNumberLabel.Size = new System.Drawing.Size(83, 13);
+            courseNumberLabel.TabIndex = 5;
+            courseNumberLabel.Text = "Course Number:";
             // 
-            // tableAdapterManager
+            // titleLabel
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
-            this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Homework4.RegistrationDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            titleLabel.AutoSize = true;
+            titleLabel.Location = new System.Drawing.Point(12, 124);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new System.Drawing.Size(30, 13);
+            titleLabel.TabIndex = 7;
+            titleLabel.Text = "Title:";
+            // 
+            // creditsLabel
+            // 
+            creditsLabel.AutoSize = true;
+            creditsLabel.Location = new System.Drawing.Point(12, 150);
+            creditsLabel.Name = "creditsLabel";
+            creditsLabel.Size = new System.Drawing.Size(42, 13);
+            creditsLabel.TabIndex = 9;
+            creditsLabel.Text = "Credits:";
+            // 
+            // courseIdentifierLabel
+            // 
+            courseIdentifierLabel.AutoSize = true;
+            courseIdentifierLabel.Location = new System.Drawing.Point(12, 176);
+            courseIdentifierLabel.Name = "courseIdentifierLabel";
+            courseIdentifierLabel.Size = new System.Drawing.Size(86, 13);
+            courseIdentifierLabel.TabIndex = 11;
+            courseIdentifierLabel.Text = "Course Identifier:";
             // 
             // coursesBindingNavigator
             // 
@@ -118,9 +164,34 @@
             this.coursesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.coursesBindingNavigator.Name = "coursesBindingNavigator";
             this.coursesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.coursesBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.coursesBindingNavigator.Size = new System.Drawing.Size(908, 25);
             this.coursesBindingNavigator.TabIndex = 0;
             this.coursesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -155,16 +226,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -187,26 +251,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // coursesBindingNavigatorSaveItem
             // 
@@ -217,15 +263,6 @@
             this.coursesBindingNavigatorSaveItem.Text = "Save Data";
             this.coursesBindingNavigatorSaveItem.Click += new System.EventHandler(this.coursesBindingNavigatorSaveItem_Click);
             // 
-            // courseIdLabel
-            // 
-            courseIdLabel.AutoSize = true;
-            courseIdLabel.Location = new System.Drawing.Point(12, 46);
-            courseIdLabel.Name = "courseIdLabel";
-            courseIdLabel.Size = new System.Drawing.Size(55, 13);
-            courseIdLabel.TabIndex = 1;
-            courseIdLabel.Text = "Course Id:";
-            // 
             // courseIdTextBox
             // 
             this.courseIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseId", true));
@@ -235,15 +272,6 @@
             this.courseIdTextBox.Size = new System.Drawing.Size(60, 20);
             this.courseIdTextBox.TabIndex = 2;
             // 
-            // departmentLabel
-            // 
-            departmentLabel.AutoSize = true;
-            departmentLabel.Location = new System.Drawing.Point(12, 72);
-            departmentLabel.Name = "departmentLabel";
-            departmentLabel.Size = new System.Drawing.Size(65, 13);
-            departmentLabel.TabIndex = 3;
-            departmentLabel.Text = "Department:";
-            // 
             // departmentTextBox
             // 
             this.departmentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Department", true));
@@ -251,15 +279,6 @@
             this.departmentTextBox.Name = "departmentTextBox";
             this.departmentTextBox.Size = new System.Drawing.Size(60, 20);
             this.departmentTextBox.TabIndex = 4;
-            // 
-            // courseNumberLabel
-            // 
-            courseNumberLabel.AutoSize = true;
-            courseNumberLabel.Location = new System.Drawing.Point(12, 98);
-            courseNumberLabel.Name = "courseNumberLabel";
-            courseNumberLabel.Size = new System.Drawing.Size(83, 13);
-            courseNumberLabel.TabIndex = 5;
-            courseNumberLabel.Text = "Course Number:";
             // 
             // courseNumberTextBox
             // 
@@ -269,15 +288,6 @@
             this.courseNumberTextBox.Size = new System.Drawing.Size(60, 20);
             this.courseNumberTextBox.TabIndex = 6;
             // 
-            // titleLabel
-            // 
-            titleLabel.AutoSize = true;
-            titleLabel.Location = new System.Drawing.Point(12, 124);
-            titleLabel.Name = "titleLabel";
-            titleLabel.Size = new System.Drawing.Size(30, 13);
-            titleLabel.TabIndex = 7;
-            titleLabel.Text = "Title:";
-            // 
             // titleTextBox
             // 
             this.titleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "Title", true));
@@ -285,15 +295,6 @@
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(163, 20);
             this.titleTextBox.TabIndex = 8;
-            // 
-            // creditsLabel
-            // 
-            creditsLabel.AutoSize = true;
-            creditsLabel.Location = new System.Drawing.Point(12, 150);
-            creditsLabel.Name = "creditsLabel";
-            creditsLabel.Size = new System.Drawing.Size(42, 13);
-            creditsLabel.TabIndex = 9;
-            creditsLabel.Text = "Credits:";
             // 
             // creditsTextBox
             // 
@@ -303,15 +304,6 @@
             this.creditsTextBox.Size = new System.Drawing.Size(42, 20);
             this.creditsTextBox.TabIndex = 10;
             // 
-            // courseIdentifierLabel
-            // 
-            courseIdentifierLabel.AutoSize = true;
-            courseIdentifierLabel.Location = new System.Drawing.Point(12, 176);
-            courseIdentifierLabel.Name = "courseIdentifierLabel";
-            courseIdentifierLabel.Size = new System.Drawing.Size(86, 13);
-            courseIdentifierLabel.TabIndex = 11;
-            courseIdentifierLabel.Text = "Course Identifier:";
-            // 
             // courseIdentifierTextBox
             // 
             this.courseIdentifierTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseIdentifier", true));
@@ -320,11 +312,113 @@
             this.courseIdentifierTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseIdentifierTextBox.TabIndex = 12;
             // 
+            // sectionsBindingSource
+            // 
+            this.sectionsBindingSource.DataMember = "FK__Sections__Course__1273C1CD";
+            this.sectionsBindingSource.DataSource = this.coursesBindingSource;
+            // 
+            // sectionsDataGridView
+            // 
+            this.sectionsDataGridView.AutoGenerateColumns = false;
+            this.sectionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sectionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.sectionsDataGridView.DataSource = this.sectionsBindingSource;
+            this.sectionsDataGridView.Location = new System.Drawing.Point(31, 235);
+            this.sectionsDataGridView.Name = "sectionsDataGridView";
+            this.sectionsDataGridView.Size = new System.Drawing.Size(853, 214);
+            this.sectionsDataGridView.TabIndex = 13;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.registrationDataSet;
+            // 
+            // registrationDataSet
+            // 
+            this.registrationDataSet.DataSetName = "RegistrationDataSet";
+            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
+            this.tableAdapterManager.SectionsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Homework4.RegistrationDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // sectionsTableAdapter
+            // 
+            this.sectionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "SectionId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "SectionId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CourseID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CourseID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SchoolQuarter";
+            this.dataGridViewTextBoxColumn3.HeaderText = "SchoolQuarter";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Item";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "StartTime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "StartTime";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "EndTime";
+            this.dataGridViewTextBoxColumn6.HeaderText = "EndTime";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "RoomNumber";
+            this.dataGridViewTextBoxColumn7.HeaderText = "RoomNumber";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Instructor";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Instructor";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // CourseAndSectionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(908, 469);
+            this.Controls.Add(this.sectionsDataGridView);
             this.Controls.Add(courseIdLabel);
             this.Controls.Add(this.courseIdTextBox);
             this.Controls.Add(departmentLabel);
@@ -341,11 +435,13 @@
             this.Name = "CourseAndSectionsForm";
             this.Text = "CourseAndSectionsForm";
             this.Load += new System.EventHandler(this.CourseAndSectionsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).EndInit();
             this.coursesBindingNavigator.ResumeLayout(false);
             this.coursesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +472,16 @@
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.TextBox creditsTextBox;
         private System.Windows.Forms.TextBox courseIdentifierTextBox;
+        private System.Windows.Forms.BindingSource sectionsBindingSource;
+        private RegistrationDataSetTableAdapters.SectionsTableAdapter sectionsTableAdapter;
+        private System.Windows.Forms.DataGridView sectionsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
