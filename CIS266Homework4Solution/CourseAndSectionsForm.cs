@@ -8,22 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Christine Jordan
+//11.6.2020
+//Homework 5 Student Registration
 namespace Homework4
 {
     public partial class CourseAndSectionsForm : Form
     {
-        public CourseAndSectionsForm()
+        public CourseAndSectionsForm() //constructor
         {
             InitializeComponent();
         }
 
-        private void coursesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void coursesBindingNavigatorSaveItem_Click(object sender, EventArgs e) //save item method
         {
             try //creating try catch to exceptions if anything breaks --cmj
             {
                 this.Validate();
                 this.coursesBindingSource.EndEdit();
+
+                foreach (var item in registrationDataSet.Courses)//extra credit
+                {
+                    if (item.RowState == DataRowState.Deleted) //looking for deleted row state
+                    {
+
+                    }
+                }
+
                 this.tableAdapterManager.UpdateAll(this.registrationDataSet);
+
+               
             }
             catch (Exception ex)
             {
@@ -34,7 +48,7 @@ namespace Homework4
 
         }
 
-        private void CourseAndSectionsForm_Load(object sender, EventArgs e)
+        private void CourseAndSectionsForm_Load(object sender, EventArgs e) //form loading method
         {
             try //creating try catch --cmj
             {

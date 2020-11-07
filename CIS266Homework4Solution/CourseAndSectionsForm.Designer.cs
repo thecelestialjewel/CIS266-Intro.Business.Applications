@@ -38,6 +38,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAndSectionsForm));
             this.coursesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.registrationDataSet = new Homework4.RegistrationDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -56,8 +58,6 @@
             this.creditsTextBox = new System.Windows.Forms.TextBox();
             this.courseIdentifierTextBox = new System.Windows.Forms.TextBox();
             this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.registrationDataSet = new Homework4.RegistrationDataSet();
             this.coursesTableAdapter = new Homework4.RegistrationDataSetTableAdapters.CoursesTableAdapter();
             this.tableAdapterManager = new Homework4.RegistrationDataSetTableAdapters.TableAdapterManager();
             this.sectionsTableAdapter = new Homework4.RegistrationDataSetTableAdapters.SectionsTableAdapter();
@@ -78,9 +78,9 @@
             courseIdentifierLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).BeginInit();
             this.coursesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,6 +177,16 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.registrationDataSet;
+            // 
+            // registrationDataSet
+            // 
+            this.registrationDataSet.DataSetName = "RegistrationDataSet";
+            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -192,6 +202,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Visible = false;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -317,16 +328,6 @@
             this.sectionsBindingSource.DataMember = "FK__Sections__Course__1273C1CD";
             this.sectionsBindingSource.DataSource = this.coursesBindingSource;
             // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.registrationDataSet;
-            // 
-            // registrationDataSet
-            // 
-            this.registrationDataSet.DataSetName = "RegistrationDataSet";
-            this.registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // coursesTableAdapter
             // 
             this.coursesTableAdapter.ClearBeforeFill = true;
@@ -437,9 +438,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).EndInit();
             this.coursesBindingNavigator.ResumeLayout(false);
             this.coursesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Christine Jordan
+//11.6.2020
+//Student Registration HW5
 namespace Homework4
 {
     public partial class MainForm : Form
@@ -42,6 +45,25 @@ namespace Homework4
         private void courseAndSectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowForm(new CourseAndSectionsForm()); //instantiating form
+        }
+
+
+        private void titleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal); //layout be horizontal for open windows
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade); //will cascade the windows
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in MdiChildren) //looping through each open child window
+            {
+                form.Close();
+            }
         }
     }
 }
