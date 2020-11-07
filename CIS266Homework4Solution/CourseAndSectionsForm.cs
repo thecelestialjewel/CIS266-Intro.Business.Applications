@@ -65,5 +65,34 @@ namespace Homework4
            
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e) //attempt at extra credit.
+        {
+            if (int.TryParse(courseIdTextBox.Text, out int courseIdToDelete))
+            {
+                //Foreign key constraint sections removed first.
+                foreach (var section in registrationDataSet.Sections)
+                {
+                    if (section.CourseID == courseIdToDelete)
+                    {
+                        section.Delete();
+                    }
+                }
+
+                //Delete Course after Sections removed
+                foreach (var course in registrationDataSet.Courses)
+                {
+                    if (course.CourseId == courseIdToDelete)
+                    {
+                        course.Delete();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete: Not a valid course id.");
+            }
+        }
     }
 }
