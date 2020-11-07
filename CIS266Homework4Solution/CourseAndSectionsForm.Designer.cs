@@ -56,12 +56,12 @@
             this.creditsTextBox = new System.Windows.Forms.TextBox();
             this.courseIdentifierTextBox = new System.Windows.Forms.TextBox();
             this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sectionsDataGridView = new System.Windows.Forms.DataGridView();
             this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationDataSet = new Homework4.RegistrationDataSet();
             this.coursesTableAdapter = new Homework4.RegistrationDataSetTableAdapters.CoursesTableAdapter();
             this.tableAdapterManager = new Homework4.RegistrationDataSetTableAdapters.TableAdapterManager();
             this.sectionsTableAdapter = new Homework4.RegistrationDataSetTableAdapters.SectionsTableAdapter();
+            this.sectionsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,9 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingNavigator)).BeginInit();
             this.coursesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // courseIdLabel
@@ -317,25 +317,6 @@
             this.sectionsBindingSource.DataMember = "FK__Sections__Course__1273C1CD";
             this.sectionsBindingSource.DataSource = this.coursesBindingSource;
             // 
-            // sectionsDataGridView
-            // 
-            this.sectionsDataGridView.AutoGenerateColumns = false;
-            this.sectionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sectionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.sectionsDataGridView.DataSource = this.sectionsBindingSource;
-            this.sectionsDataGridView.Location = new System.Drawing.Point(31, 235);
-            this.sectionsDataGridView.Name = "sectionsDataGridView";
-            this.sectionsDataGridView.Size = new System.Drawing.Size(853, 214);
-            this.sectionsDataGridView.TabIndex = 13;
-            // 
             // coursesBindingSource
             // 
             this.coursesBindingSource.DataMember = "Courses";
@@ -354,12 +335,31 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
-            this.tableAdapterManager.SectionsTableAdapter = null;
+            this.tableAdapterManager.SectionsTableAdapter = this.sectionsTableAdapter;
             this.tableAdapterManager.UpdateOrder = Homework4.RegistrationDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sectionsTableAdapter
             // 
             this.sectionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // sectionsDataGridView
+            // 
+            this.sectionsDataGridView.AutoGenerateColumns = false;
+            this.sectionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sectionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.sectionsDataGridView.DataSource = this.sectionsBindingSource;
+            this.sectionsDataGridView.Location = new System.Drawing.Point(15, 213);
+            this.sectionsDataGridView.Name = "sectionsDataGridView";
+            this.sectionsDataGridView.Size = new System.Drawing.Size(836, 220);
+            this.sectionsDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -374,7 +374,6 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "CourseID";
             this.dataGridViewTextBoxColumn2.HeaderText = "CourseID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // dataGridViewTextBoxColumn3
@@ -417,7 +416,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 469);
+            this.ClientSize = new System.Drawing.Size(908, 516);
             this.Controls.Add(this.sectionsDataGridView);
             this.Controls.Add(courseIdLabel);
             this.Controls.Add(this.courseIdTextBox);
@@ -439,9 +438,9 @@
             this.coursesBindingNavigator.ResumeLayout(false);
             this.coursesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
