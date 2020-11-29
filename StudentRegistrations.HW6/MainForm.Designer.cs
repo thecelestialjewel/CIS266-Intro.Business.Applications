@@ -41,6 +41,8 @@
             this.titleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentEnrollmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +71,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.windowsToolStripMenuItem});
+            this.windowsToolStripMenuItem,
+            this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -88,7 +91,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -104,21 +107,21 @@
             // coursesToolStripMenuItem
             // 
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.coursesToolStripMenuItem.Text = "&Courses";
             this.coursesToolStripMenuItem.Click += new System.EventHandler(this.coursesToolStripMenuItem_Click);
             // 
             // sectionsToolStripMenuItem
             // 
             this.sectionsToolStripMenuItem.Name = "sectionsToolStripMenuItem";
-            this.sectionsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.sectionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sectionsToolStripMenuItem.Text = "&Sections";
             this.sectionsToolStripMenuItem.Click += new System.EventHandler(this.sectionsToolStripMenuItem_Click);
             // 
             // courseAndSectionToolStripMenuItem
             // 
             this.courseAndSectionToolStripMenuItem.Name = "courseAndSectionToolStripMenuItem";
-            this.courseAndSectionToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.courseAndSectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.courseAndSectionToolStripMenuItem.Text = "Course and Section";
             this.courseAndSectionToolStripMenuItem.Click += new System.EventHandler(this.courseAndSectionToolStripMenuItem_Click);
             // 
@@ -152,6 +155,21 @@
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentEnrollmentToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // studentEnrollmentToolStripMenuItem
+            // 
+            this.studentEnrollmentToolStripMenuItem.Name = "studentEnrollmentToolStripMenuItem";
+            this.studentEnrollmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.studentEnrollmentToolStripMenuItem.Text = "Student Enrollment";
+            this.studentEnrollmentToolStripMenuItem.Click += new System.EventHandler(this.studentEnrollmentToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -189,6 +207,8 @@
         private System.Windows.Forms.ToolStripMenuItem titleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentEnrollmentToolStripMenuItem;
     }
 }
 

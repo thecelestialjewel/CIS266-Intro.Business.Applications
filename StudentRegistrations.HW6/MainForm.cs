@@ -65,5 +65,10 @@ namespace Homework4
                 form.Close();
             }
         }
+
+        private void studentEnrollmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new StudentListForm());
+        }
     }
 }

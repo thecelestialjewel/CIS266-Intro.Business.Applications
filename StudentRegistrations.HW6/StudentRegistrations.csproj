@@ -94,6 +94,12 @@
     <Compile Include="SectionDetailForm.Designer.cs">
       <DependentUpon>SectionDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentListForm.Designer.cs">
+      <DependentUpon>StudentListForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CourseAndSectionsForm.resx">
       <DependentUpon>CourseAndSectionsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="SectionDetailForm.resx">
       <DependentUpon>SectionDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentListForm.resx">
+      <DependentUpon>StudentListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
