@@ -31,5 +31,18 @@ namespace Homework4
             this.studentsTableAdapter.Fill(this.registrationDataSet.Students);
 
         }
+
+        //
+        private void studentsListBox_Format(object sender, ListControlConvertEventArgs e)
+        {
+            e.Value = ((DataRowView)e.ListItem).Row["FirstName"] + " " + ((DataRowView)e.ListItem).Row["LastName"];
+
+
+        }
+
+        private void studentsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,7 +51,7 @@
             this.courseNumberLbl = new System.Windows.Forms.Label();
             this.courseEnrolledTxtbx = new System.Windows.Forms.TextBox();
             this.attemptedCreditsLbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.creditsAttemptedTxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingNavigator)).BeginInit();
@@ -222,6 +222,8 @@
             this.studentsListBox.Size = new System.Drawing.Size(267, 264);
             this.studentsListBox.TabIndex = 1;
             this.studentsListBox.ValueMember = "StudentID";
+            this.studentsListBox.SelectedIndexChanged += new System.EventHandler(this.studentsListBox_SelectedIndexChanged);
+            this.studentsListBox.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.studentsListBox_Format);
             // 
             // courseNumberLbl
             // 
@@ -252,19 +254,20 @@
             this.attemptedCreditsLbl.Text = "Number of Credits Attempted:";
             this.attemptedCreditsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // creditsAttemptedTxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 364);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 20);
-            this.textBox1.TabIndex = 5;
+            this.creditsAttemptedTxtbox.Enabled = false;
+            this.creditsAttemptedTxtbox.Location = new System.Drawing.Point(209, 364);
+            this.creditsAttemptedTxtbox.Name = "creditsAttemptedTxtbox";
+            this.creditsAttemptedTxtbox.Size = new System.Drawing.Size(72, 20);
+            this.creditsAttemptedTxtbox.TabIndex = 5;
             // 
             // StudentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 413);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.creditsAttemptedTxtbox);
             this.Controls.Add(this.attemptedCreditsLbl);
             this.Controls.Add(this.courseEnrolledTxtbx);
             this.Controls.Add(this.courseNumberLbl);
@@ -306,6 +309,6 @@
         private System.Windows.Forms.Label courseNumberLbl;
         private System.Windows.Forms.TextBox courseEnrolledTxtbx;
         private System.Windows.Forms.Label attemptedCreditsLbl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox creditsAttemptedTxtbox;
     }
 }
