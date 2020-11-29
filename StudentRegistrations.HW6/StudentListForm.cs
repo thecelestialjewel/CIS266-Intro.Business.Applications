@@ -14,15 +14,18 @@ namespace Homework4
     //Christine Jordan 
     //Homework 6 Student Registration
     //11.29.2020
-    public partial class StudentListForm : Form
+    public partial class StudentListForm : Form //Student list inherits from form 
     {
+        //Constructor that initializes component
         public StudentListForm()
         {
+            
             InitializeComponent();
         }
 
+        
         private void studentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { //Click event that saves dataset changes back to database
             this.Validate();
             this.studentsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.registrationDataSet);
