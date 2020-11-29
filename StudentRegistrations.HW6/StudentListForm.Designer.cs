@@ -52,6 +52,9 @@
             this.courseEnrolledTxtbx = new System.Windows.Forms.TextBox();
             this.attemptedCreditsLbl = new System.Windows.Forms.Label();
             this.creditsAttemptedTxtbox = new System.Windows.Forms.TextBox();
+            this.enrollmentTableAdapter = new Homework4.RegistrationDataSetTableAdapters.EnrollmentTableAdapter();
+            this.sectionsTableAdapter = new Homework4.RegistrationDataSetTableAdapters.SectionsTableAdapter();
+            this.coursesTableAdapter = new Homework4.RegistrationDataSetTableAdapters.CoursesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingNavigator)).BeginInit();
@@ -75,9 +78,9 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CoursesTableAdapter = null;
-            this.tableAdapterManager.EnrollmentTableAdapter = null;
-            this.tableAdapterManager.SectionsTableAdapter = null;
+            this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
+            this.tableAdapterManager.EnrollmentTableAdapter = this.enrollmentTableAdapter;
+            this.tableAdapterManager.SectionsTableAdapter = this.sectionsTableAdapter;
             this.tableAdapterManager.StudentsTableAdapter = this.studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = Homework4.RegistrationDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -262,6 +265,18 @@
             this.creditsAttemptedTxtbox.Size = new System.Drawing.Size(72, 20);
             this.creditsAttemptedTxtbox.TabIndex = 5;
             // 
+            // enrollmentTableAdapter
+            // 
+            this.enrollmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // sectionsTableAdapter
+            // 
+            this.sectionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
             // StudentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,5 +325,8 @@
         private System.Windows.Forms.TextBox courseEnrolledTxtbx;
         private System.Windows.Forms.Label attemptedCreditsLbl;
         private System.Windows.Forms.TextBox creditsAttemptedTxtbox;
+        private RegistrationDataSetTableAdapters.CoursesTableAdapter coursesTableAdapter;
+        private RegistrationDataSetTableAdapters.EnrollmentTableAdapter enrollmentTableAdapter;
+        private RegistrationDataSetTableAdapters.SectionsTableAdapter sectionsTableAdapter;
     }
 }
