@@ -50,6 +50,8 @@
             this.studentsListBox = new System.Windows.Forms.ListBox();
             this.courseNumberLbl = new System.Windows.Forms.Label();
             this.courseEnrolledTxtbx = new System.Windows.Forms.TextBox();
+            this.attemptedCreditsLbl = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingNavigator)).BeginInit();
@@ -217,7 +219,7 @@
             this.studentsListBox.FormattingEnabled = true;
             this.studentsListBox.Location = new System.Drawing.Point(24, 44);
             this.studentsListBox.Name = "studentsListBox";
-            this.studentsListBox.Size = new System.Drawing.Size(245, 264);
+            this.studentsListBox.Size = new System.Drawing.Size(267, 264);
             this.studentsListBox.TabIndex = 1;
             this.studentsListBox.ValueMember = "StudentID";
             // 
@@ -225,7 +227,7 @@
             // 
             this.courseNumberLbl.AutoSize = true;
             this.courseNumberLbl.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseNumberLbl.Location = new System.Drawing.Point(49, 325);
+            this.courseNumberLbl.Location = new System.Drawing.Point(12, 332);
             this.courseNumberLbl.Name = "courseNumberLbl";
             this.courseNumberLbl.Size = new System.Drawing.Size(185, 18);
             this.courseNumberLbl.TabIndex = 2;
@@ -234,16 +236,36 @@
             // courseEnrolledTxtbx
             // 
             this.courseEnrolledTxtbx.Enabled = false;
-            this.courseEnrolledTxtbx.Location = new System.Drawing.Point(95, 346);
+            this.courseEnrolledTxtbx.Location = new System.Drawing.Point(209, 332);
             this.courseEnrolledTxtbx.Name = "courseEnrolledTxtbx";
-            this.courseEnrolledTxtbx.Size = new System.Drawing.Size(82, 20);
+            this.courseEnrolledTxtbx.Size = new System.Drawing.Size(72, 20);
             this.courseEnrolledTxtbx.TabIndex = 3;
+            // 
+            // attemptedCreditsLbl
+            // 
+            this.attemptedCreditsLbl.AutoSize = true;
+            this.attemptedCreditsLbl.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attemptedCreditsLbl.Location = new System.Drawing.Point(12, 364);
+            this.attemptedCreditsLbl.Name = "attemptedCreditsLbl";
+            this.attemptedCreditsLbl.Size = new System.Drawing.Size(193, 18);
+            this.attemptedCreditsLbl.TabIndex = 4;
+            this.attemptedCreditsLbl.Text = "Number of Credits Attempted:";
+            this.attemptedCreditsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(209, 364);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(72, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // StudentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 413);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.attemptedCreditsLbl);
             this.Controls.Add(this.courseEnrolledTxtbx);
             this.Controls.Add(this.courseNumberLbl);
             this.Controls.Add(this.studentsListBox);
@@ -283,5 +305,7 @@
         private System.Windows.Forms.ListBox studentsListBox;
         private System.Windows.Forms.Label courseNumberLbl;
         private System.Windows.Forms.TextBox courseEnrolledTxtbx;
+        private System.Windows.Forms.Label attemptedCreditsLbl;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
